@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+.a{
+margin-left: auto;
+margin-right: auto;
+}
+table,th,td{
+border: 1px solid black;
+text-align:center
+}
+</style>
+</head>
+<h1 align="center">Online Registration form</h1>
+<hr>
+<body>
+<form action="" onsubmit="fun()">
+<table class="a">
+<tr>
+<th>Username</th>
+<td><input type="text" name="username" id="username" required></td>
+</tr>
+<tr>
+<th>Password</th>
+<td>
+<input type="password" id="p" name="p" required>
+</td>
+</tr>
+<tr>
+<th>Confirm password</th>
+<td>
+<input type="password" id="cp" name="cp" required>
+</td>
+</tr>
+<tr>
+<th>Name</th>
+<td><input type="text" name="name" id="name" required></td>
+</tr>
+<tr>
+<th>Address</th>
+<td>
+<textarea rows="5" cols="20" id="address" name="address" required></textarea>
+<tr>
+<th>Profession:</th>
+<td>
+<select name="prof" id="prof">
+<option value="">Select One</option>
+<option value="scientist">Scientist</option>
+<option value="doctor">Doctor</option>
+<option value="engineer">Engineer</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>Gender</th>
+<td>
+<input type="radio" id="gender" name="male" value="male">
+<label for="male">Male</label>
+<input type="radio" id="gender" name="female" value="female">
+<label for="female">Female</label>
+<input type="radio" id="gender" name="others" value="others">
+<label for="others">Others</label>
+</td>
+</tr>
+<tr>
+<td><input type="submit" value ="submit"></td>
+<td><input type="reset" value ="reset"></td>
+</tr>
+</table>
+</form>
+</body>
+<script type="text/javascript">
+function fun(){
+	var s=document.getElementById("name").value;
+	var add=document.getElementById("address").value;
+	var g=document.getElementById("gender").value;
+	var p=document.getElementById("prof").value;
+	document.writeln("The submitted details are");
+	document.writeln("Name: "+s);
+	document.writeln("\nGender: "+g);
+	document.writeln("\nAddress: "+add);
+	document.writeln("\nProfession: "+p);
+}
+</script>
+</html>
